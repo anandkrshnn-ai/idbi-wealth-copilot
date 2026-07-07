@@ -25,7 +25,7 @@ This document contains the final, polished copy for your Slide Deck (PPT) and yo
 ### Slide 1: Team Details
 - **Team Name:** AI Wealth Copilot
 - **Team Leader:** Anandakrishnan Damodaran
-- **Problem Statement:** Problem Statement 1 – Digital Wealth Management
+- **Problem Statement:** Digital Wealth Management
 - **Organisation:** Independent Builder
 - **Location:** Chennai, Tamil Nadu
 

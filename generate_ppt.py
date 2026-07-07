@@ -21,7 +21,7 @@ def set_slide_background(slide, color):
     fill.solid()
     fill.fore_color.rgb = color
 
-def add_header(slide, title_text, category_text="AI WEALTH COPILOT"):
+def add_header(slide, title_text, category_text="AI WEALTH COPILOT PROTOTYPE"):
     # Header bar background shape
     header_box = slide.shapes.add_shape(
         MSO_SHAPE.RECTANGLE, Inches(0), Inches(0), Inches(13.333), Inches(1.1)
@@ -102,7 +102,7 @@ def main():
     tf1 = title_box.text_frame
     tf1.word_wrap = True
     p1 = tf1.paragraphs[0]
-    p1.text = "AI WEALTH COPILOT"
+    p1.text = "AI WEALTH COPILOT PROTOTYPE"
     p1.font.size = Pt(46)
     p1.font.bold = True
     p1.font.color.rgb = COLOR_WHITE
@@ -129,7 +129,7 @@ def main():
     p_t = tf_meta.add_paragraph()
     p_t.text = (
         "• Team Leader: Anandakrishnan Damodaran\n"
-        "• Problem Statement: Problem Statement 1 – Digital Wealth Management\n"
+        "• Problem Statement: Digital Wealth Management\n"
         "• Organisation: Independent Builder\n"
         "• Location: Chennai, Tamil Nadu"
     )
@@ -169,6 +169,17 @@ def main():
     p_prob_body.font.color.rgb = COLOR_WHITE
     p_prob_body.space_before = Pt(10)
     p_prob_body.line_spacing = 1.2
+
+    # Disclaimer on Title Slide
+    disc_box1 = slide1.shapes.add_textbox(Inches(0.8), Inches(6.8), Inches(11.7), Inches(0.4))
+    tf_disc1 = disc_box1.text_frame
+    tf_disc1.word_wrap = True
+    p_disc1 = tf_disc1.paragraphs[0]
+    p_disc1.text = "This is an independent prototype created for demonstration purposes. It is not affiliated with or endorsed by any bank."
+    p_disc1.font.size = Pt(10)
+    p_disc1.font.italic = True
+    p_disc1.font.color.rgb = COLOR_BORDER
+    p_disc1.font.name = 'Arial'
     
     # -------------------------------------------------------------
     # SLIDE 2: Brief About the Idea
@@ -184,7 +195,7 @@ def main():
     tf_left.word_wrap = True
     
     p = tf_left.paragraphs[0]
-    p.text = "AI WEALTH COPILOT CORE PILOT"
+    p.text = "AI WEALTH COPILOT PROTOTYPE"
     p.font.bold = True
     p.font.size = Pt(14)
     p.font.color.rgb = COLOR_DARK_BLUE
@@ -681,6 +692,17 @@ def main():
     p_desc.font.size = Pt(12)
     p_desc.font.color.rgb = COLOR_WHITE
     
+    # Disclaimer on Final Slide
+    disc_box11 = slide11.shapes.add_textbox(Inches(0.8), Inches(6.8), Inches(11.7), Inches(0.4))
+    tf_disc11 = disc_box11.text_frame
+    tf_disc11.word_wrap = True
+    p_disc11 = tf_disc11.paragraphs[0]
+    p_disc11.text = "This is an independent prototype created for demonstration purposes. It is not affiliated with or endorsed by any bank."
+    p_disc11.font.size = Pt(10)
+    p_disc11.font.italic = True
+    p_disc11.font.color.rgb = COLOR_BORDER
+    p_disc11.font.name = 'Arial'
+
     # Save presentation
     filepath = "AI_Wealth_Copilot_Pitch_Deck.pptx"
     prs.save(filepath)
